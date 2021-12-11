@@ -1,0 +1,18 @@
+.bg {
+    background-image: url(../images/undraw_hot_beverage_2vw3.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+body {
+    background: #ffe259;
+    background: linear-gradient(to right, #ffa751, #ffe259);
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration-color: white;
+}
