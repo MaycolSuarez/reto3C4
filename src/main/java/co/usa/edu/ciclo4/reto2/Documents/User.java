@@ -14,7 +14,7 @@ public class User {
     private String identification;
     private String name;
     private Date birthtDay;
-    private Integer monthBirthtDay;
+    private String monthBirthtDay;
     private String address;
     private String cellPhone;
     private String email;
@@ -24,7 +24,7 @@ public class User {
     public User() {
     }
     
-    public User(Integer id, String identification, String name, String address, Date birthtDay, Integer monthBirthtDay,
+    public User(Integer id, String identification, String name, String address, Date birthtDay, String monthBirthtDay,
             String cellPhone, String email, String password, String zone, String type) {
         this.id = id;
         this.identification = identification;
@@ -47,11 +47,11 @@ public class User {
         this.birthtDay = birthtDay;
     }
 
-    public Integer getMonthBirthtDay() {
+    public String getMonthBirthtDay() {
         return monthBirthtDay;
     }
 
-    public void setMonthBirthtDay(Integer monthBirthtDay) {
+    public void setMonthBirthtDay(String monthBirthtDay) {
         this.monthBirthtDay = monthBirthtDay;
     }
 
