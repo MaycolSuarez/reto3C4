@@ -76,14 +76,22 @@ public class OrderService {
     public List<Order> findByZone(String zona) {
         return orderRepository.findByZone(zona);
     }
+
+   
+    //Reto 4: Ordenes de un asesor
+    public List<Order> ordersSalesManByID(Integer id){
+        return orderRepository.ordersSalesManByID(id);
+    }
     
-    // public List<Order> ordersSalesManByDate(String dateStr, int id) {
-    //     return orderRepository.ordersSalesManByDate(dateStr, id);
-    // }
-    
-    // public List<Order> ordersSalesManByState(String state, Integer id) {
-    //     return orderRepository.ordersSalesManByState(state, id);
-    // }
+    //Reto 4: Ordenes de un asesor x Estado
+    public List<Order> ordersSalesManByState(String state, Integer id){
+        return orderRepository.ordersSalesManByState(state, id);
+    }
+
+    //Reto 4: Ordenes de un asesor x fecha
+    public List<Order> ordersSalesManByDate(String dateStr, Integer id) {
+        return orderRepository.ordersSalesManByDate(dateStr,id);
+    }
 }
     
 
