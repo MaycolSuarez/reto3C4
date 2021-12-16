@@ -13,8 +13,8 @@ public class User {
     private Integer id;
     private String identification;
     private String name;
-    // private Date birthtDay;
-    // private String monthBirthtDay;
+    private Date birthtDay;
+    private String monthBirthtDay;
     private String address;
     private String cellPhone;
     private String email;
@@ -30,8 +30,8 @@ public class User {
         this.identification = identification;
         this.name = name;
         this.address = address;
-        // this.birthtDay = birthtDay;
-        // this.monthBirthtDay = monthBirthtDay;
+        this.birthtDay = birthtDay;
+        this.monthBirthtDay = monthBirthtDay;
         this.cellPhone = cellPhone;
         this.email = email;
         this.password = password;
@@ -39,21 +39,21 @@ public class User {
         this.type = type;
     }
 
-    // public Date getBirthtDay() {
-    //     return birthtDay;
-    // }
+    public Date getBirthtDay() {
+        return birthtDay;
+    }
 
-    // public void setBirthtDay(Date birthtDay) {
-    //     this.birthtDay = birthtDay;
-    // }
+    public void setBirthtDay(Date birthtDay) {
+        this.birthtDay = birthtDay;
+    }
 
-    // public String getMonthBirthtDay() {
-    //     return monthBirthtDay;
-    // }
+    public String getMonthBirthtDay() {
+        return monthBirthtDay;
+    }
 
-    // public void setMonthBirthtDay(String monthBirthtDay) {
-    //     this.monthBirthtDay = monthBirthtDay;
-    // }
+    public void setMonthBirthtDay(String monthBirthtDay) {
+        this.monthBirthtDay = monthBirthtDay;
+    }
 
     public Integer getId() {
         return id;
