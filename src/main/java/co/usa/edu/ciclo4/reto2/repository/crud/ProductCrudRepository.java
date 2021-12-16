@@ -14,4 +14,10 @@ public interface ProductCrudRepository extends MongoRepository<Product, String> 
     @Query("{reference:?0}")
     Optional<Product> findProdcutByReference(String reference);
 
+    @Query("{description:?0}")
+    Optional<Product> findProdcutByDescription(String description);
+
+    @Query("{price:?0}")
+    Optional<Product> findProdcutByPrice(Double price);
+
 }

@@ -70,5 +70,24 @@ public class ProductService {
             throw new ResourceNotFoundException("Product with reference "+reference+" Not found");
         }
     }
+
+    public Product getProductByDescription(String description) {
+        Optional<Product> consulta = productRepository.getProductByDescription(description);
+        if (consulta.isPresent()) {
+            return consulta.get();
+        }else{
+            throw new ResourceNotFoundException("Product with reference: "+description+" NotFound");
+        }
+    }
+
+    
+    public Product getProductByPrice(Double price) {
+        Optional<Product> consulta = productRepository.getProductByPrice(price);
+        if (consulta.isPresent()) {
+            return consulta.get();
+        }else{
+            throw new ResourceNotFoundException("Product with reference: "+price+" NotFound");
+        }
+    }
     
 }

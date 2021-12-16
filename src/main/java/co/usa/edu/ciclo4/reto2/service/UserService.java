@@ -120,4 +120,13 @@ public class UserService {
         return aBoolean;
     }
 
+    public Optional<User> findProdcutByBirthday(String day){
+        Optional<User> consulta = userRepository.findUserByBirthday(day);
+        if (consulta.isEmpty()) {
+            throw new ResourceNotFoundException("User with day: "+day+" Not found");
+        } else {
+            return consulta;
+        }
+    }
+
 }

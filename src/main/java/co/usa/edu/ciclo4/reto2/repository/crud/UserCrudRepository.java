@@ -18,8 +18,8 @@ public interface UserCrudRepository extends MongoRepository<User, Integer> {
     //Para seleccionar el usuario con el id maximo
     Optional<User> findTopByOrderByIdDesc();
 
-    @Query("{description:?0}")
-    Optional<User> findProdcutByReference(String reference);
+    @Query("{monthBirthtDay:?0}")
+    Optional<User> findUserByBirthday(String day);
     // @Query("{email: ?0}") //SQL -> select * from Users where email = ?
     // Optional<User> findByEmail(String email);
 

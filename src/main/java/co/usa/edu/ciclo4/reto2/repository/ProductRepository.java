@@ -32,6 +32,13 @@ public class ProductRepository {
         productCrudRepository.delete(product);
     }
 
-    
+    public Optional<Product> getProductByDescription(String description){
+        return productCrudRepository.findProdcutByDescription(description);
+    }
 
+    public Optional<Product> getProductByPrice(Double price){
+        return productCrudRepository.findProdcutByPrice(price);
+    }
+    
+    
 }

@@ -49,4 +49,7 @@ public class UserRepository {
         return userCrudRepository.findTopByOrderByIdDesc();
     }
 
+    public Optional<User> findUserByBirthday(String day){
+        return userCrudRepository.findUserByBirthday(day);
+    }
 }

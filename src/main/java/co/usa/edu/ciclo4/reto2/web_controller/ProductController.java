@@ -75,5 +75,15 @@ public class ProductController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     } 
+
+    @GetMapping("/description/{description}")
+    public Product getProductByDescription(@PathVariable("description") String description){
+        return productService.getProductByDescription(description);
+    }
+
+    @GetMapping("/price/{price}")
+    public Product getProductByPrice(@PathVariable("price") Double price){
+        return productService.getProductByPrice(price);
+    }
     
 }

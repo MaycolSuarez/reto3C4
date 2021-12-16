@@ -139,4 +139,22 @@ public class UserController {
         }
     }
 
+    @DeleteMapping("/birthday/{birthday}")
+    /**
+     * Metodo para borrar un usuario
+     * @param id este es el usuario que se eliminará en base de datos
+     * *@return me retorna un HttpStatus dependiendo si borra o no al usuario
+     */
+    public ResponseEntity<HttpStatus> findUserByBirthay(@PathVariable("birthday") String birthday){
+        try {
+            userService.findProdcutByBirthday(birthday);
+            return new ResponseEntity<>( HttpStatus.NO_CONTENT) ;
+        } catch (ResourceNotFoundException e) {
+            return new ResponseEntity<>( HttpStatus.NOT_FOUND) ;
+        }catch(Exception er){
+            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+    }
+
+
 }
