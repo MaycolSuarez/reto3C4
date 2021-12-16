@@ -50,6 +50,6 @@ public class UserRepository {
     }
 
     public Optional<User> findUserByBirthday(String day){
-        return userCrudRepository.findUserByBirthday(day);
+        return userCrudRepository.findBymonthBirthtDay(day);
     }
 }

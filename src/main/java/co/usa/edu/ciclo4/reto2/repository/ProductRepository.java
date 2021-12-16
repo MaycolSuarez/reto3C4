@@ -36,9 +36,9 @@ public class ProductRepository {
         return productCrudRepository.findProdcutByDescription(description);
     }
 
-    public Optional<Product> getProductByPrice(Double price){
+    public List<Product> getProductByPrice(Double price){
         return productCrudRepository.findProdcutByPrice(price);
     }
-    
+
     
 }

@@ -147,7 +147,7 @@ public class UserController {
      */
     public ResponseEntity<HttpStatus> findUserByBirthay(@PathVariable("birthday") String birthday){
         try {
-            userService.findProdcutByBirthday(birthday);
+            userService.findUserByBirthday(birthday);
             return new ResponseEntity<>( HttpStatus.NO_CONTENT) ;
         } catch (ResourceNotFoundException e) {
             return new ResponseEntity<>( HttpStatus.NOT_FOUND) ;

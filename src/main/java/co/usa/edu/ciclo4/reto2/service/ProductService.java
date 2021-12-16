@@ -81,13 +81,8 @@ public class ProductService {
     }
 
     
-    public Product getProductByPrice(Double price) {
-        Optional<Product> consulta = productRepository.getProductByPrice(price);
-        if (consulta.isPresent()) {
-            return consulta.get();
-        }else{
-            throw new ResourceNotFoundException("Product with reference: "+price+" NotFound");
-        }
+    public List<Product> getProductByPrice( Double price) {
+         return productRepository.getProductByPrice(price);
     }
     
 }

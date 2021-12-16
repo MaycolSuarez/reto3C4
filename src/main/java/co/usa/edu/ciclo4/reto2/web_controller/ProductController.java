@@ -82,7 +82,7 @@ public class ProductController {
     }
 
     @GetMapping("/price/{price}")
-    public Product getProductByPrice(@PathVariable("price") Double price){
+    public List<Product> getProductByPrice(@PathVariable("price") Double price){
         return productService.getProductByPrice(price);
     }
     

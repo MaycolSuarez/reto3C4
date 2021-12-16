@@ -1,5 +1,6 @@
 package co.usa.edu.ciclo4.reto2.repository.crud;
 
+import java.util.List;
 import java.util.Optional;
 
 
@@ -18,6 +19,6 @@ public interface ProductCrudRepository extends MongoRepository<Product, String> 
     Optional<Product> findProdcutByDescription(String description);
 
     @Query("{price:?0}")
-    Optional<Product> findProdcutByPrice(Double price);
+    List<Product> findProdcutByPrice(Double price);
 
 }
