@@ -77,7 +77,7 @@ public class ProductController {
     } 
 
     @GetMapping("/description/{description}")
-    public List<Product> getProductsByPrice(@PathVariable("word") String description) {
+    public List<Product> getProductsByDescription(@PathVariable("description") String description) {
 		return productService.getProductsByDescription(description);
 	}
 
