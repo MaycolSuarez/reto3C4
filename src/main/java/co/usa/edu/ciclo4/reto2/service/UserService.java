@@ -120,13 +120,17 @@ public class UserService {
         return aBoolean;
     }
 
-    public Optional<User> findUserByBirthday(String day){
-        Optional<User> consulta = userRepository.findUserByBirthday(day);
-        if (consulta.isEmpty()) {
-            throw new ResourceNotFoundException("User with day: "+day+" Not found");
-        } else {
-            return consulta;
-        }
+    public List<User> findUsersByBirthday(String monthBirthDay) {
+        return userRepository.findByMonthBirthtDay(monthBirthDay);
     }
+
+    // public List<User> findUserByBirthday(String day){
+    //     Optional<User> consulta = userRepository.findByMonthBirthtDay(day);
+    //     if (consulta.isEmpty()) {
+    //         throw new ResourceNotFoundException("User with day: "+day+" Not found");
+    //     } else {
+    //         return consulta;
+    //     }
+    // }
 
 }

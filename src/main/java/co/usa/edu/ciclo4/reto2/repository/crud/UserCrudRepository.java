@@ -1,5 +1,6 @@
 package co.usa.edu.ciclo4.reto2.repository.crud;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.mongodb.repository.MongoRepository;
@@ -18,6 +19,10 @@ public interface UserCrudRepository extends MongoRepository<User, Integer> {
     //Para seleccionar el usuario con el id maximo
     Optional<User> findTopByOrderByIdDesc();
 
+    /**
+	 * método para hallar usuarios por mes de cumpleaños
+	 */
+	List<User> findByMonthBirthtDay(String monthBirthtDay);
     //@Query("{monthBirthtDay:?0}")
     Optional<User> findBymonthBirthtDay(String day);
     // @Query("{email: ?0}") //SQL -> select * from Users where email = ?
