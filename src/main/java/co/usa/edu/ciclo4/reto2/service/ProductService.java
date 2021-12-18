@@ -71,14 +71,18 @@ public class ProductService {
         }
     }
 
-    public Product getProductByDescription(String description) {
-        Optional<Product> consulta = productRepository.getProductByDescription(description);
-        if (consulta.isPresent()) {
-            return consulta.get();
-        }else{
-            throw new ResourceNotFoundException("Product with reference: "+description+" NotFound");
-        }
+    public List<Product> getProductsByDescription(String description){
+        return productRepository.findByDescriptionLikeIgnoreCase(description);
     }
+
+    // public Product getProductByDescription(String description) {
+    //     List<Product> consulta = productRepository.findByDescriptionLikeIgnoreCase(description);
+    //     if (consulta.isPresent()) {
+    //         return consulta.get();
+    //     }else{
+    //         throw new ResourceNotFoundException("Product with reference: "+description+" NotFound");
+    //     }
+    // }
 
     
     public List<Product> getProductByPrice( Double price) {
